@@ -18,6 +18,8 @@ app = Flask(__name__)
 app.config['MAX_CONTENT_LENGTH'] = 4 * 1024 * 1024
 
 # Default route just shows simple text
+
+
 @app.route('/')
 def index():
     return 'CustomVision.ai model host harness'
@@ -25,6 +27,8 @@ def index():
 # Like the CustomVision.ai Prediction service /image route handles either
 #     - octet-stream image file
 #     - a multipart/form-data with files in the imageData parameter
+
+
 @app.route('/image', methods=['POST'])
 @app.route('/<project>/image', methods=['POST'])
 @app.route('/<project>/image/nostore', methods=['POST'])
@@ -68,6 +72,7 @@ def predict_url_handler(project=None, publishedName=None):
     except Exception as e:
         print('EXCEPTION:', str(e))
         return 'Error processing image'
+
 
 if __name__ == '__main__':
     # Load and intialize the model

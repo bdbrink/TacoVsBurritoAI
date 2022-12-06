@@ -1,7 +1,7 @@
 # TacoVsBurritoAI
 
-This is a WIP for an application using Azure PaaS to create an AI that can tell you if an obejct is a taco or burrito.
+## What this is
+Simple machine learning model that can be used to detect and compare images.
 
-I have created using Custom Vision to train the AI using Tags.
-
-You can add any image and it will give a probability of being a Taco or burrito, and it works for any object.
+## Data
+This was originally used to train a simple model using Azure Cosmos Db, you can use other databases as the image source or even use a local database.
